@@ -1,0 +1,132 @@
+/* index.css */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #00A9FF, #FF4F79); /* Gradiente de azul a fucsia */
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Agregar un efecto de pintura en el fondo */
+.app-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/cartographer.png'); /* Efecto sutil de pinceladas o textura */
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A4D7A; /* Fondo de la barra de navegación gris azulado */
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.responsive-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centra la carta horizontalmente */
+    align-items: center; /* Centra la carta verticalmente */
+    transform: scale(1);
+    transform-origin: center;
+}
+
+/* Estilos adicionales para la carta de contacto */
+.contact-card {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+}
+
+.contact-card h2 {
+    font-size: 2.2rem; /* Aumentamos el tamaño de las letras */
+    color: #A4FF00; /* Título en verde lima */
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contact-card h2:hover {
+    color: #A4FF00; /* Cambiar color al pasar el mouse */
+    border-color: #A4FF00;
+    background-color: transparent;
+}
+
+.contact-card p {
+    font-size: 1.5rem; /* Aumentamos el tamaño de las letras */
+    color: #fff;
+}
+
+/* Nueva clase para los textos con efecto de contorno y mayor tamaño */
+.contact-card .info p {
+    font-size: 1.5rem; /* Aumentamos el tamaño de las letras */
+    margin: 10px 0;
+    color: #FFFFFF; /* Color base de texto */
+    font-weight: bold; /* Aumentamos el peso de la fuente */
+    transition: color 0.3s ease, border 0.3s ease; /* Transición para color y borde */
+    border: 2px solid transparent; /* Inicialmente sin borde */
+    padding: 0 5px; /* Añadimos un pequeño padding para que el borde se vea bien */
+}
+
+.contact-card .info p:hover {
+    color: #A4FF00; /* Cambia el color del texto al pasar el mouse */
+    border-color: #A4FF00; /* Le damos el borde verde lima */
+    background-color: transparent;
+}
+
+.contact-card .info strong {
+    color: #A4FF00;
+}
+
+footer {
+    background-color: #3A4D7A; /* Barra de navegación */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 0 0 8px 8px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adds space above the image */
+    margin-bottom: 20px; /* Adds space below the image */
+}
+
+.profile-image {
+    width: 150px; /* Image size, adjust as needed */
+    height: 150px; /* Ensure it's a square */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
